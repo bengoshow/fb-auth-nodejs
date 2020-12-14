@@ -1,10 +1,11 @@
 import formdata from 'form-data';
+import api from './fresbhooksApi';
 //create an instance of formdata.
 const data = new formdata();
 
 //set data form fields
 data.append('grant_type', 'authorization_code');
-data.append('code', process.env.code);
+data.append('code', process.env.code || '');
 data.append('client_id', process.env.FB_CLIENT_ID);
 data.append('client_secret', process.env.FB_CLIENT_SECRET);
 data.append('redirect_uri', process.env.FB_REDIRECT_URL);
@@ -12,7 +13,7 @@ data.append('redirect_uri', process.env.FB_REDIRECT_URL);
 // Make API Call with Axios
 const getBearerToken = async () => {
   try {
-    const response = await axios({
+    const response = await api({
       method: 'POST',
       url: 'https://api.freshbooks.com/auth/oauth/token',
       headers: {
