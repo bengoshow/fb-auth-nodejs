@@ -1,6 +1,9 @@
 const redirect = (req, res, next) => {
-  console.log('got here!');
   // store code in memory
+  if (!req.query.code)
+    return res.status(500).json({
+      message: 'Invalid route',
+    });
   process.env.code = req.query.code;
   return res.json({
     message: 'Redirect Successful',
