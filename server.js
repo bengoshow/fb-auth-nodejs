@@ -22,7 +22,7 @@ app.use('/', (req, res) =>
 const PORT = process.env.PORT || process.env.DEV_SERVER_PORT;
 try {
   app.listen(PORT, () => {
-    console.log(`Server started on port ${PORT}...`);
+    console.log(`Server started on port --> ${PORT}...`);
   });
 } catch (error) {
   console.log(error);
