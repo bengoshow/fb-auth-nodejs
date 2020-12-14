@@ -1,3 +1,4 @@
 import freshbooksApi from './fresbhooksApi';
+import getBearerToken from './getBearerToken';
 
-module.exports = { freshbooksApi };
+module.exports = { freshbooksApi, getBearerToken };
