@@ -4,7 +4,6 @@ const webhook = (req, res, next) => {
     Asynchronously so you dont tie internal updates before returning 200 OK to Freshbooks
   */
   console.log(req.body);
-
   return res.json({
     message: 'Received Webhook Successfully',
     data: req.body,

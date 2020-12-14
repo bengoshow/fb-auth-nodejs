@@ -1,7 +1,6 @@
 import 'babel-polyfill';
 import formdata from 'form-data';
 import api from './fresbhooksApi';
-import 'dotenv/config';
 
 //create an instance of formdata.
 const data = new formdata();
