@@ -1,4 +1,3 @@
-
 const webhook = (req, res, next) => {
   /* 
     Do something here asynchronously e.g. updating local database of the client that was created
@@ -9,7 +8,6 @@ const webhook = (req, res, next) => {
   return res.json({
     message: 'Received Webhook Successfully',
     data: req.body,
-    token
   });
 };
 
