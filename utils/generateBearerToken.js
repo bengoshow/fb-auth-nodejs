@@ -4,10 +4,7 @@ const data = new formdata();
 
 //set data form fields
 data.append('grant_type', 'authorization_code');
-data.append(
-  'code',
-  'f4bd4fd14c66c2f79844098028066d98a57a62e1339a9832d72b1b1fdf3c3281',
-);
+data.append('code', process.env.code);
 data.append('client_id', process.env.FB_CLIENT_ID);
 data.append('client_secret', process.env.FB_CLIENT_SECRET);
 data.append('redirect_uri', process.env.FB_REDIRECT_URL);

@@ -2,7 +2,7 @@ import 'babel-polyfill';
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import { redirect } from './routes';
+import { redirect, webhook } from './routes';
 import 'dotenv/config';
 
 const app = express();
@@ -11,6 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use('/demoapp/redirect', redirect);
+app.use('/demoapp/webhook', webhook);
 
 //Create entry route
 app.use('/', (req, res) =>
